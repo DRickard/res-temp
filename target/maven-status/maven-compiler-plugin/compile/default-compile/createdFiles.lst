@@ -1,0 +1,16 @@
+edu/ucla/library/libservices/reserves/db/mappers/ItemMapper.class
+edu/ucla/library/libservices/reserves/beans/Department.class
+edu/ucla/library/libservices/reserves/webservices/ItemsService.class
+edu/ucla/library/libservices/reserves/generators/CourseGenerator.class
+edu/ucla/library/libservices/reserves/db/utiltiy/DataSourceFactory.class
+edu/ucla/library/libservices/reserves/webservices/DepartmentsService.class
+edu/ucla/library/libservices/reserves/db/mappers/DepartmentMapper.class
+edu/ucla/library/libservices/reserves/beans/Course.class
+edu/ucla/library/libservices/reserves/beans/Item.class
+edu/ucla/library/libservices/reserves/webservices/EverythingService.class
+edu/ucla/library/libservices/reserves/db/mappers/CourseMapper.class
+edu/ucla/library/libservices/reserves/generators/DepartmentGenerator.class
+edu/ucla/library/libservices/reserves/db/mappers/DistinctDepartmentMapper.class
+edu/ucla/library/libservices/reserves/generators/ItemGenerator.class
+edu/ucla/library/libservices/reserves/generators/EverythingGenerator.class
+edu/ucla/library/libservices/reserves/webservices/CoursesService.class

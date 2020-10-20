@@ -1,0 +1,16 @@
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/generators/DepartmentGenerator.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/webservices/ItemsService.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/webservices/EverythingService.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/beans/Course.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/generators/CourseGenerator.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/beans/Item.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/db/mappers/CourseMapper.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/db/mappers/DistinctDepartmentMapper.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/generators/EverythingGenerator.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/db/mappers/DepartmentMapper.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/webservices/DepartmentsService.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/generators/ItemGenerator.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/webservices/CoursesService.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/beans/Department.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/db/mappers/ItemMapper.java
+/home/cloud_user/experiments/reserves-service/reserves-service/src/main/java/edu/ucla/library/libservices/reserves/db/utiltiy/DataSourceFactory.java
