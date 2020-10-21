@@ -29,6 +29,9 @@ public class CourseGenerator
   private static final String QUARTER_QUERY =
     "SELECT * FROM vger_support.reserve_courses WHERE department_id = ? AND "
     + "quarter = ? ORDER BY course_name";
+  private static final String ALL_COURSE_QUERY = 
+    "SELECT * FROM vger_support.reserve_courses WHERE quarter = ? ORDER BY " 
+    + "department_name, course_name";
 
   public CourseGenerator()
   {
@@ -135,5 +138,12 @@ public class CourseGenerator
     }
 
     return courses;
+  }
+
+  public void prepAllCoursesByQuarter()
+  {
+    makeConnection();
+
+    courses = new JdbcTemplate(ds).query(ALL_COURSE_QUERY, new Object[] { getQuarter() }, new CourseMapper());
   }
 }

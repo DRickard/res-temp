@@ -2,6 +2,11 @@ package edu.ucla.library.libservices.reserves.webservices;
 
 import edu.ucla.library.libservices.reserves.generators.CourseGenerator;
 
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+
 import javax.servlet.ServletConfig;
 
 import javax.ws.rs.GET;
@@ -11,6 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
+@Api(value = "/courses")
 @Path( "/courses/" )
 public class CoursesService
 {
@@ -25,7 +31,12 @@ public class CoursesService
   @GET
   @Produces( "text/xml, application/json" )
   @Path( "/dept/{deptID}" )
-  public Response coursesByDept( @PathParam( "deptID" ) int deptID )
+  @ApiOperation(value = "Finds courses in a department with reserves",
+                notes = "Valid deptID values are pulled from /departments/current or /departments/during/{term} service", 
+		responseContainer = "Response",
+                response = CourseGenerator.class, httpMethod = "GET", produces = "text/xml, application/json")
+  public Response coursesByDept( @ApiParam(value = "department to be retrieved", required = true) 
+		                 @PathParam( "deptID" ) int deptID )
   {
     CourseGenerator generator;
 
@@ -48,7 +59,15 @@ public class CoursesService
   @GET
   @Produces( "text/xml, application/json" )
   @Path( "/dept/{deptID}/term/{term}" )
-  public Response coursesByTerm( @PathParam( "deptID" ) int deptID, @PathParam( "term" ) String term )
+  @ApiOperation(value = "Finds courses in a department with reserves during an academic term",
+                notes = "Valid deptID values are pulled from /departments/current or /departments/during/{term} service", 
+		responseContainer = "Response",
+                response = CourseGenerator.class, httpMethod = "GET", produces = "text/xml, application/json")
+
+  public Response coursesByTerm( @ApiParam(value = "department to be retrieved", required = true) 
+		                 @PathParam( "deptID" ) int deptID, 
+				 @ApiParam(value = "academic term for filter", required = true)  
+				 @PathParam( "term" ) String term )
   {
     CourseGenerator generator;
 

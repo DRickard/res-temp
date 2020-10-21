@@ -2,6 +2,10 @@ package edu.ucla.library.libservices.reserves.webservices;
 
 import edu.ucla.library.libservices.reserves.generators.ItemGenerator;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+
 import javax.servlet.ServletConfig;
 
 import javax.ws.rs.GET;
@@ -11,6 +15,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
+@Api(value = "/items")
 @Path( "/items/" )
 public class ItemsService
 {
@@ -25,7 +30,12 @@ public class ItemsService
   @GET
   @Produces( "text/xml, application/json" )
   @Path( "/course/{srsNo}" )
-  public Response itemsBySRS( @PathParam( "srsNo" ) String srsNo )
+  @ApiOperation(value = "Finds reserved items for a course identified by Registrar srsNo",
+                responseContainer = "Response",
+                response = ItemGenerator.class, httpMethod = "GET", 
+		produces = "text/xml, application/json")
+  public Response itemsBySRS( @ApiParam(value = "course SRS number", required = true) 
+		              @PathParam( "srsNo" ) String srsNo )
   {
     ItemGenerator generator;
 
@@ -48,7 +58,14 @@ public class ItemsService
   @GET
   @Produces( "text/xml, application/json" )
   @Path( "/course/{srsNo}/term/{term}" )
-  public Response itemsBySRSTerm( @PathParam( "srsNo" ) String srsNo, @PathParam( "term" ) String term )
+  @ApiOperation(value = "Finds reserved items for a course during {term} academic term, identified by Registrar srsNo",
+                responseContainer = "Response",
+                response = ItemGenerator.class, httpMethod = "GET", 
+		produces = "text/xml, application/json")
+  public Response itemsBySRSTerm( @ApiParam(value = "course SRS number", required = true) 
+		                  @PathParam( "srsNo" ) String srsNo, 
+				  @ApiParam(value = "UCLA academic term", required = true) 
+				  @PathParam( "term" ) String term )
   {
     ItemGenerator generator;
 
